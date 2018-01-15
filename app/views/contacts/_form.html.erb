@@ -1,0 +1,44 @@
+<div class="container pt">
+		<div class="row mt">
+			<div class="col-lg-6 col-lg-offset-3 centered">
+				<h3>İLETİŞİM</h3>
+				<hr>
+				<p>Size geri dönüş sağlayabilmem için lütfen telefon numaranızı veya e-posta adresinizi mesaja ekleyiniz.</p>
+			</div>
+		</div>
+		<div class="row mt">	
+			<div class="col-lg-8 col-lg-offset-2">
+				<%= form_for(Contact.new) do |f| %>
+  <% if Contact.new.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@contact.errors.count, "error") %> prohibited this contact from being saved:</h2>
+
+      <ul>
+      <% @contact.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    
+    <%= f.text_field :name,  placeholder:'Adınız', class: 'form-control'%>
+  </div>
+
+  <div class="form-group">
+    
+    <%= f.text_field :konu, placeholder:'Konu', class: 'form-control'%>
+  </div>
+  
+  <div class="form-group">
+
+    <%= f.text_area :msg, placeholder:'Mesajınız...', class: 'form-control', rows:'6'%>
+  </div>
+  <div class="actions">
+    <%= f.submit "Gönder"%>
+  </div>
+<% end %>   			
+			</div>
+		</div><!-- /row -->
+	</div>

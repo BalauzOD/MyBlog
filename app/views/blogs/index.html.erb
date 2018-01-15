@@ -1,0 +1,42 @@
+
+  <% @blogs.reverse.each do |blog| %>
+  <br>
+    <div class="panel panel-success">
+      <div class="panel-heading">
+        <h4><%= blog.title %><h4>
+        </div>
+      <div class="panel-body">
+        <article><%= truncate(blog.blogwrite, length: 1000) %>   <%= link_to "Read More",blog %></article>
+      </div>
+    </div>
+    <% end %>
+
+
+
+
+<!--<p><#%= blog.blogwrite %></p>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+ 
+
+

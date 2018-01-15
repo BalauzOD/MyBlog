@@ -1,0 +1,27 @@
+<div id="ww">
+	    <div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-1 centered">
+					<img id="profil" src="assets/img/user.png" alt="Stanley">
+					<h1>Merhaba, Ben Ramazan Fatih</h1>
+					<p>Yazılım Mühendisliği 3.Sınıf öğrencisiyim. Web, mobil ve masaüstü yazılımlar geliştiriyorum. Sizin için ne yapabilirim?</p>
+					<p>Lütfen, <a href="/contact">buradan</a> benimle iletişime geçin. Ayrıntıları konuşalım.</p>
+					
+					
+				
+				</div><!-- /col-lg-8 -->
+			</div><!-- /row -->
+	    </div> <!-- /container -->
+	</div><!-- /ww -->
+	
+	<div class="container pt">
+		<div class="row mt centered">
+			<% request.env.each do |key, value| %>   <strong><%= key %></strong> => <%= value %><br/> <% end %>	
+			<div class="col-lg-4">
+				
+				<a class="zoom green" href="/pages/proje1"><img class="img-responsive" src="assets/img/portfolio/port01.jpg" alt="" /></a>
+				<p>Proje1</p>
+			</div>
+			
+		</div><!-- /row -->
+	</div><!-- /container -->
